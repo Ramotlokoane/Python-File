@@ -1,0 +1,26 @@
+#Declare variables
+monthlyPayment=0
+loanAmount=0
+interestRate=0
+numberOfPayments=0
+numberOfYears=0
+
+#Prompt the user for the values neede to calculate monthly payments
+strLoanAmount= print(" How much money do you need to borrow?")
+strInterestRate= print("What is the interest for the loan?")
+strNumberOfYears = print(" How many years will it take to pay off the loan?")
+
+#Convert string into float numbers so that we can use the formula
+loanAmount= float(strLoanAmount)
+interestRate= float(strInterestRate)
+numberOfYears= float(strNumberOfYears)
+
+#For number of paymenst,use number of the years for the loan*12
+numberOfPayments= numberOfYears*12
+
+#Calculate monthly payments using the formula
+monthlyPayment = loan * interestRate * (1+ interestRate) * numberOfPayments \
+    / ((1 + interestRate) * numberOfPayments -1)
+
+#provide the result to the user
+print("Your monthly payment will be " + str(monthlyPayment))
