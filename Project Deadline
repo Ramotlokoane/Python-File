@@ -1,0 +1,26 @@
+#import datetime to be able to print date and time
+import datetime
+currentDate = datetime.date.today()
+print(currentDate)
+
+# Prompt the user to enter the deadline for their project
+userInput = input('Enter the deadline of project (mm/dd/yyyy)')
+
+
+deadLine = datetime.datetime.strptime(userInput, '%m/%d/%Y').date()
+
+print('Project Deadline is:', deadLine)
+
+daysLeft = deadLine - currentDate 
+
+#print('Days left are:', daysLeft.days)
+
+nbrWeeks = daysLeft.days / 7
+
+#The modulo will return the remainder of the division
+#which will tell us how many days are left 
+nbrDays = daysLeft.days%7
+
+#display the result to the user
+
+print("You have %d weeks" %nbrWeeks + " and %d days " %nbrDays + "until your deadline.")
