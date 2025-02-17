@@ -1,0 +1,13 @@
+# Initializing variables
+userInput = ''
+finalAmount = 0
+
+userInput = int(input("What is amount of your total purchase $" ))
+
+#if user input more than $50 than free shipping or else add $10 to the amount
+
+if userInput < 50 :
+    finalAmount = userInput + 10
+    print("Your shipping amount is $" + str(finalAmount))
+else:
+    print("Free shipping!")
